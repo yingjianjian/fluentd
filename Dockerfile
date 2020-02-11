@@ -23,6 +23,14 @@ RUN apt-get update \
  && gem install async-http -v 0.50.0 \
  && gem install ext_monitor -v 0.1.2 \
  && gem install fluentd -v 1.9.1 \
+ && gem "fluent-plugin-elasticsearch", "~> 3.2.3" \
+ && gem "fluent-plugin-concat", "~> 2.3.0" \
+ && gem "fluent-plugin-grepcounter" \
+ && gem "fluent-plugin-concat" \
+ && gem "fluent-plugin-mail" \
+ && gem "fluent-plugin-rewrite-tag-filter", "~> 2.1.0" \
+ && gem "fluent-plugin-kubernetes_metadata_filter", "~> 2.1.4" \
+ && gem "fluent-plugin-multi-format-parser", "~> 1.0.0" \
  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
  && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch" \
  && wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini-$dpkgArch.asc" \
