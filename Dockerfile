@@ -20,6 +20,7 @@ COPY Gemfile* /fluentd/
      -y --no-install-recommends \
      $buildDeps net-tools  \
     && gem install bundler --version 1.16.2 \
+    && bundle update fluentd
     && bundle config silence_root_warning true \
     && bundle install --gemfile=/fluentd/Gemfile --path=/fluentd/vendor/bundle \
     && SUDO_FORCE_REMOVE=yes \
@@ -32,8 +33,6 @@ COPY Gemfile* /fluentd/
 
 # Copy configuration files
 COPY ./conf/fluent.conf /fluentd/etc/
-COPY ./conf/systemd.conf /fluentd/etc/
-COPY ./conf/kubernetes.conf /fluentd/etc/
 RUN touch /fluentd/etc/disable.conf
 
 # Copy plugins
