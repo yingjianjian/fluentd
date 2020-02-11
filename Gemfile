@@ -3,7 +3,7 @@
 
 source "https://rubygems.org"
 
-gem "fluentd", "1.3.3"
+gem "fluentd", "1.9.1"
 gem "oj", "3.5.1"
 gem "fluent-plugin-multi-format-parser", "~> 1.0.0"
 gem "fluent-plugin-concat", "~> 2.3.0"
@@ -12,3 +12,6 @@ gem "fluent-plugin-elasticsearch", "~> 3.2.3"
 gem "fluent-plugin-kubernetes_metadata_filter", "~> 2.1.4"
 gem "ffi"
 gem "fluent-plugin-systemd", "~> 1.0.1"
+gem "fluent-plugin-grepcounter"
+gem "fluent-plugin-mail"
+gem "fluent-plugin-concat"
