@@ -33,6 +33,8 @@ GEM
       elasticsearch
       excon
       fluentd (>= 0.14.22)
+    fluent-plugin-grepcounter (0.6.0)
+      fluentd
     fluent-plugin-grok-parser (2.6.1)
       fluentd (>= 0.14.6, < 2)
     fluent-plugin-json-in-json-2 (1.0.2)
@@ -115,7 +117,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
-    yajl-ruby (1.4.1)
+    yajl-ruby (1.4.3)
 
 PLATFORMS
   ruby
@@ -126,6 +128,7 @@ DEPENDENCIES
   fluent-plugin-concat (~> 2.4.0)
   fluent-plugin-detect-exceptions (~> 0.0.12)
   fluent-plugin-elasticsearch (~> 4.0.2)
+  fluent-plugin-grepcounter
   fluent-plugin-grok-parser (~> 2.6.0)
   fluent-plugin-json-in-json-2 (>= 1.0.2)
   fluent-plugin-kubernetes_metadata_filter (~> 2.3.0)
